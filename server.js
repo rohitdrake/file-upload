@@ -20,7 +20,7 @@ app.post('/uploads', (req, res)=>{
      size=File.size;
   })
   .on("end",  ()=>{
-     res.send(`The size of ${name} is ${size} bytes.`);
+     res.send({name, size});
      return;
   })
   .parse(req);
